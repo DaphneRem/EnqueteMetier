@@ -1,0 +1,424 @@
+// out: ../css/style.min.css, compress: false
+
+a, body, abbr, acronym, address, applet, article, aside,
+audio, b, big, blockquote, body, canvas, caption, center,
+cite, code, dd, del, details, dfn, div, dl, dt, em, embed,
+fieldset, figcaption, figure, footer, form, h1, h2, h3,
+h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label,
+legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby,
+s, samp, section, small, span, strike, strong, sub, summary, sup,
+table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var,
+video {
+    margin        : 0;
+    padding       : 0;
+    border        : 0;
+    font          : inherit;
+    vertical-align: baseline;
+}
+*{
+    box-sizing : border-box;
+}
+
+@unit  : 8px;
+@button  : #F72D30;
+@gris  : #5C5C5C;
+
+body {
+    margin          :0;
+    padding         : 0;
+    background-color: white;
+    font-size       : @unit * 2;
+    font-family     : 'Roboto', sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+.menu {
+    margin : 0;
+    background     : #F7F7F7;
+    width          : 100%;
+    min-height     : @unit * 8;
+    max-height     : @unit * 8;
+    box-shadow     : 0 2px 4px 0 rgba(0,0,0,0.30);
+    display        : flex;
+    justify-content: space-between;
+
+    align-items    : center;
+    padding        : 0 @unit*3;
+    .logo {
+        display: flex;
+        vertical-align: middle;
+        img{
+            width         : @unit * 8;
+            height        : @unit * 8;
+            // border-radius : 100%;
+            // background    : @button;
+            margin        : 0;
+        }
+        h1 {
+
+            margin: 0;
+            margin-right : 40px;
+            font-size    : @unit * 4;
+            color : @gris;
+        }
+    }
+
+
+}
+
+.soustitre {
+    background-color: rgb(16, 196, 167, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width : 100%;
+    #triangle-down {
+      width   : 0;
+      height  : 0;
+      border-left : 20px solid transparent;
+      border-right : 20px solid transparent;
+      border-top : 20px solid #F7F7F7;
+      margin : auto; // centre automatiquement les éléments type block (div...)
+    }
+    h2 {
+        align-self: center;
+        margin : 0;
+        padding: 5px;
+        font-weight: 900;
+        font-size  : @unit * 7;
+        color : rgba(255, 255, 255, 0.8);
+    }
+}
+
+.sub-header {
+    height             : 600px;
+    // margin-top        : @unit;
+    background-image   : url('../images/background5.jpg');
+    z-index            : 0;
+    background-size    : cover;
+    background-repeat  : no-repeat;
+    display            : flex;
+    flex-direction     : column;
+    align-items        : center; // centre verticalement
+    justify-content    : flex-end; // centre horizontalement
+    .butt {
+        display: flex;
+        justify-content: center;
+        width: 30%;
+        button {
+            border     : 2px solid transparent;
+            outline    : none;
+            width: 100%;
+            height: 50px;
+            margin-top : @unit;
+            background-color: @button;
+            border-radius: 5px;
+            font-size: @unit * 2;
+            color :white;
+            box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+            transition-duration: 0.4s;
+            &:hover {
+                width: 100%;
+                height: 50px;
+                margin-top : @unit;
+                background-color: lighten(@button, 12%);
+                border-radius: 5px;
+                font-size: @unit * 2;
+                color :white;
+                box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+                transition-duration: 0.4s;
+            }
+        }
+    }
+    .formulaire {
+        display : flex;
+        justify-content: center;
+        .pro {
+            margin: 20px;
+            background: rgba(255, 255, 255, 0.7);
+            padding : 10px;
+            width : 30%;
+            height : 40vh;
+            border-radius: 5px;
+            display            : flex;
+            flex-direction     : column;
+            align-items        : center; // centre verticalement
+            justify-content    : center;
+            text-align: justify;
+
+        }
+        .enqueteur {
+            margin: 20px;
+            background: rgba(255, 255, 255, 0.7);
+            padding :  10px;
+            width : 30%;
+            height : 40vh;
+            border-radius: 5px;
+            display            : flex;
+            flex-direction     : column;
+            align-items        : center; // centre verticalement
+            justify-content    : center;
+            text-align: justify;
+
+        }
+    }
+    .section {
+        display: flex;
+        align-self: flex-end;
+        align-items: center;
+        justify-content: space-around;
+        width : 100%;
+        height: 100px;
+        background: rgba(92, 92, 92, 0.6);
+        color :rgba(255, 255, 255, 0.8);
+        .fleche {
+            color :rgba(255, 255, 255, 0.8);
+        }
+        img {
+            height : 90px;
+            width: 90px;
+        }
+    }
+}
+form {
+    display : flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer {
+    display: flex;
+    height: 70px;
+    width: 100%;
+    background: white;
+    color : @gris;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h2 {
+        font-size: @unit * 3;
+    }
+}
+
+input {
+	background-color: white;
+	color : #CACCCA;
+	margin : @unit;
+	padding : 1em 10em 1em 1em;
+	border-color : #E8E8E8;
+	border-radius : 5px;
+	border : 0px;
+
+}
+input:active {
+	background-color: white;
+	color : #CACCCA;
+	margin : @unit;
+	padding : 1em 10em 1em 1em;
+	border-color : #E8E8E8;
+	border-radius : 5px;
+	border : 0px;
+
+}
+input[type=submit] {
+	margin-top : @unit;
+	background-color: @button;
+	color :white;
+	padding : 1em 2em 1em 2em;
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    transition-duration: 0.4s;
+}
+input[type=submit]:hover{
+    margin-top : @unit;
+	background-color: lighten(@button, 12%);
+	color :white;
+	padding : 1em 2em 1em 2em;
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    transition-duration: 0.4s;
+}
+
+.menu-mobile {
+    display: none;
+}
+.liens {
+    display: none;
+}
+
+
+ // ============================ MODAL ============================
+
+ .modal {
+
+     display: none;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     text-align: justify;
+     background: rgb(255, 255, 255);
+     padding : 20px;
+     height: 500px;
+     width: 80%;
+     border-radius : 5px;
+     font-size: @unit*2;
+     position: fixed;
+     // demander à Enzo pour centrer ma modal en milieu de page
+     top: 20%;
+     left: 10%;
+     z-index: 99999;
+     transition: all 1s;
+     h1 {
+         padding : 20px;
+         
+     }
+     img {
+         height : 90px;
+         width: 90px;
+         margin : 30px;
+     }
+     .close {
+         display: none;
+         border     : 2px solid transparent;
+         outline    : none;
+         width: 50%;
+         height: 50px;
+         margin-top : @unit;
+         background-color: @button;
+         border-radius: 5px;
+         font-size: @unit * 2;
+         color :white;
+         box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+         transition-duration: 0.4s;
+     }
+ }
+
+
+
+// **************************************************** //
+// ******************* format mobile ****************** //
+// **************************************************** //
+
+
+@media screen and (max-width : 600px) { // format mobile
+
+    .menu {
+        h1 {
+            font-size    : @unit*3;
+        }
+        .none {
+            display: none;
+        }
+    }
+    .soustitre {
+        #triangle-down {
+          border-left : 10px solid transparent;
+          border-right : 10px solid transparent;
+          border-top : 10px solid #F7F7F7;
+        }
+        h2 {
+            text-align: center;
+            height: 20vh;
+            font-size  : @unit * 4;
+        }
+    }
+    .sub-header {
+        height             : 700px;
+        .butt {
+            display: flex;
+            justify-content: center;
+            width: 70%;
+        }
+        .formulaire {
+            display : flex;
+            margin : 0;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width : 100%;
+            .pro {
+                width : 100%;
+                height : 45vh;
+                font-size: @unit*1.5;
+            }
+            .enqueteur {
+                width : 100%;
+                height :45vh;
+                font-size: @unit*1.5;
+            }
+        }
+    }
+    .section {
+        display : none;
+        visibility: hidden;
+        p{
+            display : none;
+        }
+        i{
+            display : none;
+        }
+        img {
+            display: none;
+        }
+    }
+    .footer {
+        display : none;
+    }
+    .menu-mobile {
+        margin-top: -70px;
+        color : white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: grey;
+        padding : 40px 0px;
+        width: 100%;
+        p {
+            margin : 20px;
+            text-align: center;
+        }
+        i {
+            margin : 10px;
+            text-align: center;
+        }
+        .red {
+            color : @button;
+            font-weight: bold;
+        }
+
+    }
+    .liens {
+        // background-image: url("./images/fond.png");
+        display : flex;
+        flex-direction: column;
+        align-items: center;
+        vertical-align: center;
+        padding: 10px;
+        .suivezNous p {
+            padding: 10px;
+            width: 100%;
+
+        }
+        .social {
+            margin :0;
+            margin-bottom: 20px;
+            height: 40px;
+            display: flex;
+            align-items :center;
+            justify-content: center;
+            img {
+                margin : 5px;
+                height: 40px;
+                width: 40px;
+            }
+        }
+    }
+    .modal {
+        padding : 10px;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+    }
+
+}

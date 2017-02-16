@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Flex-P6</title>
+    <!-- la balise meta viewport permet l'adaptation du contenu au mobiles/responsive notament
+    pour que la taille de la police s'adapte à la taille de l'écran -->
+    <meta name="viewport" content="initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+<body>
+    <nav class="menu">
+        <figure class="logo"><img src="./images/logo.png"/><h1>Enquête Métier</h1></figure>
+        <h1 class="none"></h1>
+    </nav>
+    <div class="soustitre">
+            <div id="triangle-down"></div>
+            <h2>Trouvez le metier fait pour vous !</h2>
+    </div>
+    <header class="sub-header">
+        <div class="butt">
+            <button class="open" onclick="openModal()">Qui sommes nous ?</button>
+        </div>
+        <div class="formulaire">
+            <div class="pro">
+                <h4>Vous exercez un job qui vous passionne : </h4>
+                <p>Partagez votre expérience et apportez des réponses à une personne surmotivée en quête d'une nouvelle profession.
+                    Répondez à ses questions pour lui donner une autre vision du métier que vous exercez au quotidien
+                </p>
+                <form action="/ma-page-de-traitement" method="post">
+                    <div class="case">
+                        <input type="email" id="courriel" value="EMAIL ADRESS	" name="courriel" onclick="courriel.value='';" />
+                    </div>
+                    <input type="submit" value="TRANSMETTRE MA PASSION">
+                </form>
+            </div>
+            <div class="enqueteur">
+                <h4>Vous voulez trouver un métier qui vous corresponde :</h4>
+                <p>Vous entammez une reconversion professionnelle mais vous ne savez pas vers quel métier vous tourner ?
+                    Posez toutes vos questions à un professionnel à votre écoute et passionné par son job.
+                    <!-- Confrontez vos idées sur un métier aux réelles conditions de travail qui l'entourent
+                    grâce à un échange en toute honnêteté et sans langue de boît. -->
+                </p>
+                <form action="/ma-page-de-traitement" method="post">
+                    <div class="case">
+                        <input type="email" id="courriel" value="EMAIL ADRESS	" name="courriel" onclick="courriel.value='';" />
+                    </div>
+                    <input type="submit" value="TROUVER MON METIER">
+                </form>
+            </div>
+        </div>
+        <div class="section">
+            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            <p>Inscrivez-vous.</p>
+            <i class="fa fa-angle-right fa-5x fleche" aria-hidden="true"></i>
+            <i class="fa fa-exchange" aria-hidden="true"></i>
+            <p>Testez notre plateforme de mise en relation dès son lancement.</p>
+            <i class="fa fa-angle-right fa-5x fleche" aria-hidden="true"></i>
+            <i class="fa fa-users" aria-hidden="true"></i>
+            <p>Contacter un professionnel prêt à vous répondre. </br></br> Faites vous contacter par un enquêteur surmotivé.</p>
+            <img src="./images/landingpage1.png"/>
+        </div>
+        <div class="footer">
+            <h2>1ere plateforme de matching entre professionnels et personnes en réorientation ou reconversion professionnelle</h2>
+        </div>
+    </header>
+    <div class="menu-mobile">
+        <p>Inscrivez-vous.</p>
+        <i class="fa fa-angle-down fa-2x" aria-hidden="true"></i>
+        <p>Testez notre plateforme de mise en relation dès son lancement.</p>
+        <i class="fa fa-angle-down fa-2x" aria-hidden="true"></i>
+        <p>Contacter un professionnel prêt à vous répondre.</br>
+            <span class="red">ou</span> </br>
+            Faites vous contacter par un enquêteur surmotivé.</p>
+    </div>
+    <div class="liens">
+        <div class="suivezNous">
+            <p>Suivez nous ! Partagez !</p>
+        </div>
+        <div class="social">
+            <a href="http://www.facebook.com/sharer.php?u=http://www.daphneremali.fr&t=partager">
+                <img src="./images/facebook.png"/>
+            </a>
+            <a href="http://twitter.com/share?url=http://www.daphneremali.fr&text=partager">
+                <img src="./images/twitter.png"/>
+            </a>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fwww.daphneremali.fr%2Fdeveloppement%2Fwebmaster%2En_Quete_Orientation.php&title=En_Quete_dOrientation">
+                <img src="./images/linkedin.png">
+            </a>
+            <a href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.daphneremali.fr%2Fdeveloppement%2Fwebmaster%2FfEn_Quete_Orientation.php&media=http%3A%2F%2Fwww.aliasdmc.com%2Fimages%2Fthumbnail.jpg">
+                <img src="./images/pinterest.png">
+            </a>
+        </div>
+    </div>
+
+<!-- ================== MODAL =================== -->
+
+<div class="modal">
+    <div class="maModal">
+    <h1> L'équipe Enquete Metier</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      Ea iusto consectetur laudantium repudiandae commodi,
+      expedita ipsa earum inventore nesciunt, consequatur tenetur saepe,
+      vitae recusandae quos est cumque omnis aperiam qui.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Ea iusto consectetur laudantium repudiandae commodi,
+          expedita ipsa earum inventore nesciunt, consequatur tenetur saepe,
+          vitae recusandae quos est cumque omnis aperiam qui.</p>
+          <img src="./images/landingpage1.png">
+  <button class="close" onclick="closeModal()">CLOSE</button>
+  </div>
+</div>
+
+<!-- ============================================ -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+<script type="text/javascript" src="script.js">
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+<!-- <div id="sociaux" class="col-xs-12 col-lg-4">
+    <a href="http://www.facebook.com/sharer.php?u=http://www.daphneremali.fr&t=partager">
+        <img src="facebook.png">
+    </a>
+    <a href="http://twitter.com/share?url=http://www.daphneremali.fr&text=partager">
+        <img src="twitter.png">
+    </a>
+    <a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fwww.daphneremali.fr%2Fdeveloppement%2Fwebmaster%2En_Quete_Orientation.php&title=En_Quete_dOrientation">
+        <img src="linkedin.png">
+    </a>
+    <a href="#">
+        <img src="instagram.png">
+    </a> -->
+    <!-- trouver comment changer image de l'épingle pinterest -->
+    <!--<a href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.daphneremali.fr%2Fdeveloppement%2Fwebmaster%2FfEn_Quete_Orientation.php&media=http%3A%2F%2Fwww.aliasdmc.com%2Fimages%2Fthumbnail.jpg">
+        <img src="pinterest.png">
+    </a>
+</div> -->
